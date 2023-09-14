@@ -1,0 +1,6 @@
+com\example\SignUpPage\Model\Jobs\JobDescriptionModel.class
+com\example\SignUpPage\Service\JobPosting\JobPostingService.class
+com\example\SignUpPage\Model\Jobs\BriefJobDescriptionModel.class
+com\example\SignUpPage\Controller\ApplicationJobPostingController.class
+com\example\SignUpPage\Service\JobPosting\JobPostingImpl\JobPostingServiceImpl.class
+com\example\SignUpPage\Repository\JobPosting\JobPostingRepository.class
