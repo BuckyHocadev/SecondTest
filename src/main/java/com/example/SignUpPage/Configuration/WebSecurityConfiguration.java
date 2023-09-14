@@ -1,6 +1,7 @@
 package com.example.SignUpPage.Configuration;
 //import com.example.SignUpPage.Service.CustomUserDetailsService;
 import com.example.SignUpPage.Utils.RSAKeyProperties;
+
 import com.nimbusds.jose.jwk.JWK;
 import com.nimbusds.jose.jwk.JWKSet;
 import com.nimbusds.jose.jwk.RSAKey;
@@ -35,6 +36,7 @@ public class WebSecurityConfiguration {
 
     @Autowired
     private final RSAKeyProperties keys;
+
 
     public WebSecurityConfiguration(RSAKeyProperties keys) {
         this.keys = keys;
