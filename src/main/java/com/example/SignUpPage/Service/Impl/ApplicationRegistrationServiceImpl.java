@@ -23,10 +23,9 @@ import java.util.*;
 @Service
 public class ApplicationRegistrationServiceImpl implements ApplicationRegistrationService {
 
-    // 用户平台API账号(非登录账号,示例:N1234567)
     @Value("${message.chuanglan.api.account}")
     private  String account;
-    // 用户平台API密码(非登录密码)
+  
     @Value("${message.chaunglan.api.password}")
     private  String password;
 
@@ -79,7 +78,7 @@ public class ApplicationRegistrationServiceImpl implements ApplicationRegistrati
         String verifCode = verificationCode.generateCode();
         String msg = "【点我拿】您的注册验证码是" + verifCode;
 
-        //状态报告
+
         String report= "true";
         SmsSendRequest smsSingleRequest = new SmsSendRequest(account, password, msg, phoneNumber,report);
         String requestJson = JSON.toJSONString(smsSingleRequest);
