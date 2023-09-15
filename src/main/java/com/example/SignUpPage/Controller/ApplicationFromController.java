@@ -61,7 +61,7 @@ public class ApplicationFromController {
         // Return the response as needed
         logger.info("The DAMN info: {}", phoneNumber);
         if (applicationFormService.checkThePhoneNumberIfExists(phoneNumber)) {
-            return ResponseEntity.status(HttpStatus.CONFLICT).body("该电话号码已被注册 - This phone number has already registered ");
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(" - This phone number has already registered ");
         }
         return ResponseEntity.ok("Ok: ");
     }
@@ -75,7 +75,7 @@ public class ApplicationFromController {
         // Perform backend processing with the username
         // Return the response as needed
         if (applicationFormService.checkTheUsernameIfExists(username)) {
-            return ResponseEntity.status(HttpStatus.CONFLICT).body(" 该用户名已被注册。 请选择另一项 -- This username has already registered. Please choose another one ");
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(" - This username has already registered. Please choose another one ");
         }
         return ResponseEntity.ok("好的：用户名可用: Ok: The username is available");
     }
@@ -86,7 +86,7 @@ public class ApplicationFromController {
         if (applicationFormService.addUsersPersonalInformations(model)) {
             return ResponseEntity.ok("Ok: Information's are added ");
         }
-        return ResponseEntity.status(HttpStatus.CONFLICT).body(" 有问题重试 -- Something is wrong try again");
+        return ResponseEntity.status(HttpStatus.CONFLICT).body("  -- Something is wrong try again");
     }
 
     @PostMapping("/checkIfPasswordIsValid")
