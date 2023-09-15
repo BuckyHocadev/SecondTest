@@ -18,7 +18,7 @@ public class ApplicationUserCrudController {
     @GetMapping("/add")
     public ResponseEntity<?> add(@RequestBody RegistrationFormModel model){
         if(service.add(model)){
-            return ResponseEntity.ok("添加成功 -- Added successfully");
+            return ResponseEntity.ok(" -- Added successfully");
         }
         return ResponseEntity.status(HttpStatus.CONFLICT).body(": User already exits");
     }
